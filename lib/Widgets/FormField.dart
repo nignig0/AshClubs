@@ -7,6 +7,8 @@ class CustomFormField extends StatelessWidget {
   final Icon? prefixIcon;
   final double? height;
   final double? width;
+  final int? minLines;
+  final int? maxLines;
   const CustomFormField({
     required this.password,
     required this.controller,
@@ -14,6 +16,8 @@ class CustomFormField extends StatelessWidget {
     this.prefixIcon,
     this.height = 60, 
     this.width = 300,
+    this.minLines = 1,
+    this.maxLines = 1,
     super.key});
 
   @override
@@ -24,6 +28,8 @@ class CustomFormField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         obscureText: password,
+        minLines: minLines,
+        maxLines: maxLines,
         decoration: InputDecoration(
           prefixIcon: prefixIcon,
           enabledBorder: OutlineInputBorder(

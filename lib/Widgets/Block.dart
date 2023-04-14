@@ -4,11 +4,13 @@ class Block extends StatelessWidget {
   final double width;
   final Color color;
   final Widget? child;
+  final Color? borderColor;
   const Block({
     required this.height, 
     required this.width,
     required this.color,
     this.child,
+    this.borderColor = Colors.black,
     super.key});
 
   @override
@@ -20,21 +22,21 @@ class Block extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: color, 
-          border: const Border(
+          border: Border(
             bottom: BorderSide(
-              color: Colors.black, 
+              color: borderColor!, 
               width: 3
             ),
             left: BorderSide(
-              color: Colors.black, 
+              color: borderColor!, 
               width: 3
             ),
             right: BorderSide(
-              color: Colors.black, 
+              color: borderColor!, 
               width: 3
             ),
             top: BorderSide(
-              color: Colors.black, 
+              color: borderColor!, 
               width: 3
             ),)
         ),

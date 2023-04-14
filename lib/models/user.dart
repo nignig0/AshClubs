@@ -10,9 +10,16 @@ class User{
   User({
     required this.email, 
     required this.firstname, 
-    this.isClubLeader = false, 
+    this.isClubLeader = true, 
     required this.clubsIn, 
     required this.clubsLeading,
   });
 
 }
+
+User initUser  = User(
+  email: 'tanitoluwa.adebayo@ashesi.edu.gh', 
+  firstname: 'tanitoluwa', 
+  clubsIn: [], 
+  clubsLeading: [dummyClubs[1]]
+);

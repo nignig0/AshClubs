@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "445822575199",
+    "project_id": "ashclubs-dc891",
+    "storage_bucket": "ashclubs-dc891.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445822575199:android:bde36f9a9aa9fa604c71ea",
+        "android_client_info": {
+          "package_name": "com.example.ashclubs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445822575199-jh96sqlcc95imjuhaejdgcd1ruls8lqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbDllfRZTv_PKV4YLsKom_q9j-2Cjuas4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445822575199-jh96sqlcc95imjuhaejdgcd1ruls8lqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

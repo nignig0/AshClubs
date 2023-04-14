@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:ashclubs/Screens/ClubDetailScreen.dart';
 import 'package:ashclubs/Widgets/ClubBlock.dart';
 import 'package:ashclubs/models/club.dart';
+import 'package:ashclubs/models/user.dart';
 import 'package:flutter/material.dart';
 
 class ExplorePage extends StatefulWidget {
@@ -18,23 +20,24 @@ class _ExplorePageState extends State<ExplorePage> {
   
   @override
   Widget build(BuildContext context) {
-    List<Color> colors  = [
-  Theme.of(context).primaryColor,
-  Color.fromARGB(255, 18, 184, 104), 
-  Color.fromARGB(255, 234, 200, 8), 
-  Color.fromARGB(255, 202, 96, 221)
-];  
+     
     Random rand = new Random();
     return Wrap(
       runSpacing: 5,
       spacing: 15,
       children: [
         for(int index = 0; index < dummyClubs.length; index++)
-        ClubBlock(
-             height: 170,
-           width: 150,
-           club: dummyClubs[index], 
-           color: colors[rand.nextInt(4)])
+          
+        GestureDetector(
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (_)=> ClubDetailScreen(user: initUser, club: dummyClubs[index])));
+          },
+          child: ClubBlock(
+               height: 170,
+             width: 150,
+             club: dummyClubs[index], 
+             color: colors[rand.nextInt(3)]),
+        )
       ],
     );
   }
